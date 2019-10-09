@@ -14,7 +14,6 @@ app.use(express.json());
 app.use((req,res,next) => {
     res.setHeader('Acess-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'POST, GET, UPDATE,DELETE')
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
 })
 app.use(userRouter);
 app.use(taskRouter);
