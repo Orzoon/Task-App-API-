@@ -16,7 +16,17 @@ router.post('/tasks', auth, async (req, res) => {
         res.status(400).send(e)
     }
 })
+router.get('tasks/count', auth, async(req,res) => {
+    try{
+        const count = await Task.countDocuments({owner: req.user._id});
+        res.status(200).send(count)
+    }
+    catch(e){
+        res.status(500).send();
+    }
 
+
+})
 // get Tasks?completed=false
 //limit skip
 // sortby=createdAt_asc
