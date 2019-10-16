@@ -16,10 +16,12 @@ router.post('/tasks', auth, async (req, res) => {
         res.status(400).send(e)
     }
 })
-router.get('/tasks/count', auth, async(req,res) => {
+router.get('tasks/count', auth, async(req,res) => {
     try{
-        const count = await Task.countDocuments({owner: req.user._id});
-        res.status(200).send(count)
+        const totCount= await Task.countDocuments({owner: req.user._id});
+        res.status(200).send({
+            count: totCount
+        })
     }
     catch(e){
         res.status(500).send();
