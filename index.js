@@ -6,7 +6,7 @@ const cors = require('cors');
 const path = require('path')
 
 
-
+//from server
 const app = express();
 const port = process.env.PORT;
 app.use(express.static(path.join(__dirname, 'client/build')));
