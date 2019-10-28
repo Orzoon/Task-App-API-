@@ -9,7 +9,7 @@ const sendWelcomeEmail = (email,name) => {
         to: email,
         from: 'orzoonkunwar7.ak@gmail.com',
         subject: 'Orzoon\'s Task App',
-        text: `${name} Welcomt to orzoon'\s Task App to`
+        text: `${name} Welcome to orzoon'\s Task App`
     })
 }
 const sendCancelEmail = (email,name) => {
@@ -17,7 +17,7 @@ const sendCancelEmail = (email,name) => {
         to: email,
         from: 'orzoonkunwar7.ak@gmail.com',
         subject: 'Orzoon\'s Task App',
-        text: `${name} You have cancelled your account from orzoon'\s Task App to`
+        text: `${name} You have deleted your account from orzoon'\s Task App`
     })
 }
 
